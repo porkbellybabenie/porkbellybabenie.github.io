@@ -141,6 +141,49 @@
       text-decoration: underline;
     }
 
+    /* Expandable abstract */
+    details.abstract {
+      margin-bottom: 8px;
+    }
+
+    details.abstract > summary {
+      list-style: none;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.95rem;
+      color: #0070f3;
+      user-select: none;
+    }
+
+    details.abstract > summary::-webkit-details-marker {
+      display: none;
+    }
+
+    details.abstract > summary:hover {
+      text-decoration: underline;
+    }
+
+    details.abstract > summary .arrow {
+      font-size: 0.7rem;
+      transition: transform 0.2s ease;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    details.abstract[open] > summary .arrow {
+      transform: rotate(180deg);
+    }
+
+    .abstract-text {
+      font-size: 0.9rem;
+      line-height: 1.7;
+      color: #555;
+      max-width: 850px;
+      margin-top: 8px;
+    }
+
     @media (max-width: 768px) {
       header {
         padding: 14px 20px;
@@ -192,6 +235,10 @@
           <a href="https://www.dropbox.com/scl/fi/hhyfzohjrzb8806b87sux/inefficiency_nberwp.pdf?rlkey=ill4zwhiytneqwj31d58uq7w2&st=zu15tdzo&dl=0" target="_blank" rel="noopener">[ungated]</a>
           <a href="https://www.nber.org/papers/w29153" target="_blank" rel="noopener">[NBER Working Paper]</a>
         </div>
+        <details class="abstract">
+          <summary>Abstract <span class="arrow">&#9662;</span></summary>
+          <p class="abstract-text">Using data on the NBER working paper series, we show that the dissemination of economics research suffers from a congestion problem: An increase in the number of weekly released working papers on average reduces downloads, abstract views, and media attention for each paper. Subsequent publishing and citation outcomes are harmed as well. Papers written by prominent authors are not immune to this congestion effect. Finally, suggestive evidence on viewership and downloads implies that working papers substitute for the dissemination function of publication. Our results highlight how readers face time and cognitive constraints, with increased congestion in working papers leading to real impacts on how research is consumed.</p>
+        </details>
       </div>
 
     </section>
