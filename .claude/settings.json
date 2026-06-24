@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:www.nber.org)",
+      "WebFetch(domain:www.personal.soton.ac.uk)",
+      "Bash(curl -L -A \"Mozilla/5.0\" -o /tmp/aizer_mothers_pension.pdf \"https://www.nber.org/system/files/working_papers/w20103/w20103.pdf\")",
+      "Bash(curl -L -A \"Mozilla/5.0\" -o /tmp/aizer_aej2022.pdf \"https://pubs.aeaweb.org/doi/pdfplus/10.1257/app.20210816\")",
+      "Read(//private/tmp/**)",
+      "WebFetch(domain:www.semanticscholar.org)"
+    ]
+  }
+}

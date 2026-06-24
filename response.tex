@@ -1,0 +1,116 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb}
+\usepackage{url}
+\usepackage{geometry}
+\geometry{margin=1in}
+
+\title{Response}
+\author{Your Name}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+
+\section{Modified Response by CHATGPT}
+
+
+\section{Response}
+
+Thank you very much for your suggestions. They are extremely helpful. 
+
+To clarify how estimates from the historical empirical exercise map onto mechanisms relevant for current policy debates, I first reconcile both historical and modern policies in one theoretical framework. The goal is to identify the key parameters that determine who becomes the marginal licensee when licensing requirements are eased. Based on this framework, I then discuss the theoretical mechanisms that affect the quantity and quality of physicians, as well as implications for hospital spending and patient outcomes. Lastly, I discuss limitations of this study.
+
+\textbf{Terminology.} Throughout this response, I refer to the historical policy as the ``citizenship reform'' (the removal of the citizenship requirement for physician licensure in the 1960s) and to the modern policies as ``alternative-pathway policies'' (recent state laws that allow certain foreign-trained physicians to practice via non-residency routes).
+
+\section{Theoretical Framework}
+
+\subsection{Model Setup}
+Using a theoretical framework following Kugler and Sauer (2005), I conceptualize the decision-making process of foreign medical graduates (FMGs). The model considers a continuum of FMGs of skill type $\eta$, where $\eta$ is drawn from a distribution $F(\cdot)$ with support $[\underline{\eta}, \bar{\eta}]$. Individuals live for two periods and have a subjective discount rate $r$. In the first period, individuals choose whether to invest in acquiring a license or not; in the second period, all individuals work. Acquiring a license in the first period involves three categories of costs: psychological costs (e.g., the effort expended in studying for exams), out-of-pocket costs (e.g., tuition, fees, and commuting), and opportunity costs (i.e., the forgone wages that could have been earned in an unlicensed occupation during the first period). The psychological and out-of-pocket costs are specified jointly as $C/\eta$, reflecting the assumption that it is relatively easier for more highly skilled individuals to meet licensing requirements. The opportunity costs, on the other hand, are relatively higher for more skilled individuals because their outside wages are higher.
+
+Wages in the licensed and unlicensed occupations, $w_L$ and $w_U$, are defined as the marginal products of labor in each sector. Both wages are increasing in $\eta$ and decreasing in employment in the respective sector, $N_i$, $i = L, U$, reflecting diminishing returns to labor. Given this setup, an individual chooses to acquire a license and work in the licensed occupation in the second period when the discounted earnings premium from licensing is at least as large as the total cost of acquiring it in the first period:
+
+\begin{equation}
+    \frac{w_L - w_U}{1+r} \geq \frac{C}{\eta} + w_U.
+\end{equation}
+
+The decision rule can also be expressed in terms of the maximum cost $C_{\max}(\eta)$ that an individual of type $\eta$ is willing to incur to acquire a license, found by equating lifetime income in the two occupations:
+
+\begin{equation}
+    C_{\max}(\eta) = \frac{\eta\left[w_L - (2+r)w_U\right]}{1+r}.
+\end{equation}
+
+An individual of type $\eta$ chooses to work in the licensed occupation if $C_{\max}(\eta) \geq C$ and in the unlicensed occupation if $C_{\max}(\eta) < C$.
+
+\subsection{Reconciling the Citizenship Reform and Alternative-Pathway Policies}
+
+The citizenship reform lowered the cost parameter ($C$) by eliminating the time physicians would otherwise spend obtaining citizenship. Similarly, alternative-pathway policies lower $C$ by allowing foreign medical graduates (FMGs) to bypass the traditional residency route. These policies do not necessarily lower licensing standards. Alternative-pathway policies often require substantially more prior clinical experience—typically 3 to 5 years—than the traditional residency entry route, which does not require prior independent practice. Applicants must also obtain an offer from a qualifying health care facility and, in many cases, hold federal work authorization. These conditions create additional screening by both employers and the immigration system.\footnote{A common permanent resident route for physicians, the physician NIW, requires EB-2 eligibility and a commitment to provide full-time clinical service for five years in a designated underserved area or VA facility, supported by a federal or state public-interest determination.} USMLE requirements remain a central quality screen throughout this process.\footnote{Steps 1 and 2 are generally required for Match eligibility, and Step 3 is typically required for full licensure. See enacted legislation in ID, IL, RI, WI, WA, MA, and MN, among others.} Therefore, both policies expand the set of FMGs for whom $C_{\max}(\eta) \geq C$, thereby increasing the supply of licensed physicians. Which margin adjusts depends on the types of FMGs induced to enter, a point I discuss below.
+
+
+\section{Quantity of Marginally Licensed Physicians}
+
+I consider three margins through which these policies may increase physician supply: international entry, within-U.S. occupational transition, and reallocation across licensure pathways.
+
+\textbf{Entry margin.} Lowering $C$ may attract FMGs who would otherwise not have considered migrating to the United States. Under alternative-pathway policies, the prospect of lengthy residency training, together with low Match rates for FMGs, may deter qualified foreign physicians from pursuing U.S. licensure. A similar mechanism may have operated under the citizenship reform. I will test whether removing the citizenship requirement attracted new arrivals by linking FMGs across AMD cohorts and identifying whether they were previously present in the United States. In magnitude, the historical estimate for newly arrived licensees likely provides a lower bound for the effect of alternative-pathway policies. Alternative-pathway policies compress time to licensure by eliminating PGT that occurs early in the process. By contrast, the citizenship reform removed a barrier that was realized only later. If FMGs are present-biased or face adjustment frictions, the behavioral response to this reform would be limited.
+
+\textbf{Activation margin.} Among FMGs already residing in the United States, lowering $C$ may redirect individuals from unlicensed occupations, such as researchers, into the physician licensing pipeline. This margin is likely more important in the historical setting than today. Today, most FMGs entering the U.S. physician workforce do so through the Match, and once matched, the marginal cost of obtaining full licensure is relatively low.\footnote{Residency training itself satisfies the postgraduate training requirement, leaving only the USMLE Step 3 as a remaining hurdle.} In contrast, in the 1960s the citizenship requirement imposed a substantially higher marginal cost on FMGs already living in the United States. 
+
+\textbf{Reallocation margin.} A third mechanism, specific to alternative-pathway policies, is the reallocation of FMGs away from the traditional Match route. This may reduce the pool of Match applicants for hospitals that have historically relied on FMG residents. At the same time, those hospitals may benefit if alternative-pathway policies allow them to employ these physicians directly as full-time staff for several years before converting their provisional licenses to unrestricted licenses. In that case, the policy could increase both staffing flexibility and continuity.
+
+\section{Quality of Marginally Licensed Physicians}
+
+Quality is an important additional channel linking physician supply to health outcomes: marginal licensees who are higher-skilled relative to infra-marginal physicians (those who would have obtained a license regardless) may improve the quality of care, while lower-skilled marginal entrants may have the opposite effect.
+
+The direction of selection into licensing can be characterized by differentiating the maximum willingness-to-pay for a license, $C_{\max}(\eta)$, with respect to skill $\eta$. Differentiating Equation~(2) yields:
+
+\begin{equation}
+    \frac{\partial C_{\max}(\eta)}{\partial \eta} = \frac{w_L - (2+r)w_U}{1+r} + \frac{\eta\left[\frac{\partial w_L}{\partial \eta} - (2+r)\frac{\partial w_U}{\partial \eta}\right]}{1+r}.
+\end{equation}
+
+Each term may be positive or negative. If $\partial C_{\max}(\eta)/\partial \eta > 0$, higher-skilled individuals have a greater willingness to pay for a license, implying positive selection into licensing. In this case, lowering $C$ draws in relatively less-skilled individuals at the margin. Conversely, if $\partial C_{\max}(\eta)/\partial \eta < 0$, the selection is negative, and lowering $C$ induces more-skilled individuals to enter the licensing process.
+
+To answer this empirical question, I will examine the direction of selection using the average baseline ECFMG exam pass rate of the medical schools attended by newly licensed physicians, observed at the state–medical school level. If newly licensed physicians are disproportionately graduates of lower-performing medical schools, this would validate the concern for attracting less-skilled physicians at the margin.
+
+How informative are the 1960s estimates for understanding selection patterns today? The 1960s estimates are informative about the direction of selection, but only under additional assumptions when extrapolating to the present. 
+
+The model suggests that the sign of $\partial C_{\max}(\eta)/\partial \eta$ depends critically on the licensed--unlicensed wage gap, $w_L - (2+r)w_U$. Therefore, answering this question requires assessing how the parameters in Equation~(3) have changed across decades. As far as I know, direct wage data with information on medical school graduated and employment in non-physician occupations are not available in 1960s, which precludes a clean comparison. If one is willing to assume today the wage gap is larger than in the 1960s\footnote{Descriptive evidence suggests that this gap is substantial in the current period: immigrant physicians who are unable to obtain a U.S. license frequently end up in non-clinical occupations such as medical assisting, with median earnings of approximately \$41,600 per year---a fraction of typical physician starting salaries (Boesch and Nunn 2024).}, then a larger $\partial C_{\max}(\eta)/\partial \eta$ implies a more positive selection today. Under this assumption, negative selection in the 1960s would imply weaker negative selection, or even positive selection, today. Positive selection in the 1960s would instead imply that easing licensing reforms draw in less-skilled marginal entrants. 
+
+\section{Further Tests Using Hospital Spending and Patient Outcomes}
+
+Despite knowing the estimation on marginal skill of newly licensed physicians, whether it can be linked to better or worse hospital spending and patient outcomes is still ambiguous. On one side, even if the marginally licensed physicians are less skilled, they may still provide valuable care that would otherwise be unavailable, particularly in underserved areas. On the other side, if the marginal physicians are substantially less skilled, this could lead to worse patient outcomes and higher costs due to complications or inefficient care. Thus it is important to provide direct evidence on hospital spending and patient outcomes.
+
+\textbf{Healthcare access.} An increase in the supply of licensed physicians expands access to care, particularly in underserved areas. This effect can be captured empirically through utilization-related outcomes, such as hospital admissions and patient days from American Hospital Association (AHA) data, and physician visits from Survey of Health Services Utilization and Expenditures (SHSUE). 
+
+\textbf{Treatment intensity.} Recent evidence shows the importance of physicians in determining healthcare spending (Clemens and Gottlieb 2014; Badinski et al. 2023), and higher-skilled physicians achieve better patient outcomes at lower cost (Schnell and Currie 2018; Chan and Chen 2022), suggesting that quality composition might affect healthcare spending through treatment decisions rather than through access alone. A natural and feasible proxy for this channel is cost per admission or per bed from American Hospital Association (AHA) data. More direct measures, such as procedure intensity or patient discharge outcomes at physician level, would be preferable, but they are not available in the historical period.
+
+\section{Limitations}
+
+There are several limitations in this study:
+
+\begin{itemize}
+    \item \textbf{Human capital from residency training.} The model does not consider the extra human capital built via residency training, an important difference between the citizenship reform and alternative-pathway policies. Testing this channel requires measuring the human capital of physicians who do versus do not receive postgraduate training, which is beyond the scope of this paper.
+    
+    \item \textbf{Reallocation margin.} As noted in Section 2, the model predicts a reallocation margin---whereby FMGs shift from the traditional Match route to alternative pathways---that is specific to alternative-pathway policies and cannot be tested with historical data.
+    
+    \item \textbf{Data limitations.} Several data constraints, clarified throughout this response, limit the precision of the empirical tests. Future work will explore alternative data sources to test the mechanisms more directly.
+\end{itemize}
+
+\section*{References}
+
+\noindent Badinski, Ivan, Amy Finkelstein, Matthew Gentzkow, and Peter Hull. 2023. ``Geographic Variation in Healthcare Utilization: The Role of Physicians.'' NBER Working Paper No.\ 31749.
+
+\noindent Boesch, Tyler, and Ryan Nunn. 2024. ``Occupational Licensing Can Detour Immigrant Physicians' Career Paths.'' Federal Reserve Bank of Minneapolis, January 19.
+
+\noindent Chan, David C., Jr., and Yiqun Chen. 2022. ``The Productivity of Professions: Evidence from the Emergency Department.'' NBER Working Paper No.\ 30608.
+
+\noindent Clemens, Jeffrey, and Joshua D. Gottlieb. 2014. ``Do Physicians' Financial Incentives Affect Medical Treatment and Patient Health?'' \textit{American Economic Review} 104(4): 1320--1349.
+
+\noindent Kugler, Adriana D., and Robert M. Sauer. 2005. ``Doctors without Borders? Relicensing Requirements and Negative Selection in the Market for Physicians.'' \textit{Journal of Labor Economics} 23(3): 437--465.
+
+\noindent Schnell, Molly, and Janet Currie. 2018. ``Addressing the Opioid Epidemic: Is There a Role for Physician Education?'' \textit{American Journal of Health Economics} 4(3): 383--410.
+
+\end{document}

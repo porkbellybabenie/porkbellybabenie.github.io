@@ -1,0 +1,17 @@
+# Python virtual environment
+.venv/
+
+# LaTeX build artifacts
+*.aux
+*.fdb_latexmk
+*.fls
+*.log
+*.synctex.gz
+*.out
+*.toc
+
+# macOS
+.DS_Store
+
+# Claude Code local settings
+.claude/settings.local.json
