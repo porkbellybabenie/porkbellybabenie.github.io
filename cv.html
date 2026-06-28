@@ -105,6 +105,12 @@
       text-decoration: underline;
     }
 
+    /* Mobile: embedded PDFs don't render/scroll in an iframe on phones,
+       so show a tap-to-open button instead. Hidden on desktop. */
+    .cv-mobile {
+      display: none;
+    }
+
     @media (max-width: 768px) {
       header {
         padding: 14px 20px;
@@ -112,6 +118,39 @@
 
       main {
         padding: 16px 20px;
+      }
+
+      /* iframe PDF embedding is broken on mobile — hide it, show the button */
+      .cv-frame,
+      .cv-fallback {
+        display: none;
+      }
+
+      .cv-mobile {
+        display: block;
+        text-align: center;
+        margin-top: 8px;
+      }
+
+      .cv-mobile-note {
+        font-size: 0.95rem;
+        color: #555;
+        margin-bottom: 16px;
+      }
+
+      .cv-open {
+        display: inline-block;
+        background: #457b9d;
+        color: #fff;
+        text-decoration: none;
+        font-family: 'Lora', Georgia, serif;
+        font-size: 1.05rem;
+        padding: 14px 28px;
+        border-radius: 12px;
+      }
+
+      .cv-open:active {
+        background: #3a6a87;
       }
     }
 
@@ -146,6 +185,10 @@
       If the CV doesn't display above,
       <a href="CV_Wenni_Yang.pdf" target="_blank" rel="noopener">open it in a new tab</a>.
     </p>
+    <div class="cv-mobile">
+      <p class="cv-mobile-note">Tap below to view the CV in your device's PDF viewer.</p>
+      <a class="cv-open" href="CV_Wenni_Yang.pdf" target="_blank" rel="noopener">View CV (PDF)</a>
+    </div>
   </main>
 
 </body>
