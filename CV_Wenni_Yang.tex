@@ -1,0 +1,131 @@
+\documentclass[11pt]{article}
+
+\usepackage[letterpaper,top=0.5in,bottom=0.5in,left=0.5in,right=0.5in]{geometry}
+% NOTE: compile with xelatex (not pdflatex) — needed for the Cormorant Garamond name font
+\usepackage{fontspec} % body stays in the default Computer Modern (same look as before)
+% name uses Cormorant Garamond, the same family as the website headings
+\newfontfamily{\namefont}{CormorantGaramond-Medium.ttf}[
+  Path=fonts/,
+  BoldFont=CormorantGaramond-SemiBold.ttf]
+\usepackage{titlesec}
+\usepackage[hidelinks]{hyperref}
+
+% ---------- section headers: large small-caps + full-width rule ----------
+\titleformat{\section}
+  {\large\scshape}{}{0em}{}[{\titlerule[0.6pt]}]
+\titlespacing*{\section}{0pt}{14pt}{6pt}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+
+% ---------- helpers ----------
+% body content is indented ~1.1em while section titles/rules stay flush
+\newlength{\bodyindent}
+\setlength{\bodyindent}{1.1em}
+% black underlined hyperlink (matches template)
+\newcommand{\ulink}[2]{\href{#1}{\underline{#2}}}
+% generic left/right row (single line, indented)
+\newcommand{\cvrow}[2]{\noindent\hspace*{\bodyindent}#1 \hfill #2 \par}
+% two-line entry: bold title + location, then description + italic dates
+\newcommand{\cventry}[4]{%
+  \cvrow{\textbf{#1}}{#2}%
+  \cvrow{#3}{\textit{#4}}%
+  \vspace{4pt}%
+}
+% single line: description + italic date
+\newcommand{\cvitem}[2]{\cvrow{#1}{\textit{#2}}}
+% grouped sub-heading (e.g. an institution) with nested items beneath it
+\newcommand{\cvgrouphead}[1]{\par\vspace{3pt}\noindent\hspace*{\bodyindent}\textbf{#1}\par\vspace{1pt}}
+\newcommand{\cvsubitem}[2]{\noindent\hspace*{\dimexpr\bodyindent+1.2em\relax}#1 \hfill \textit{#2} \par}
+% indented body paragraph, wrapped lines hang to the same indent
+\newcommand{\bline}[1]{\par\noindent\hangindent=\bodyindent\hangafter=0\hspace*{\bodyindent}#1\par}
+% research/paper paragraph (block-indented) with gap after
+\newcommand{\paper}[1]{\bline{#1}\vspace{7pt}}
+
+\begin{document}
+
+% ===================== HEADER =====================
+\begin{center}
+  {\namefont\huge Wenni Yang}\\[5pt]
+  Citizenship: Chinese\\[2pt]
+  One Shields Avenue, Davis, CA 95616\\[2pt]
+  (+1) 530-761-6417 \,$\vert$\, \ulink{mailto:wniyang@ucdavis.edu}{wniyang@ucdavis.edu}
+\end{center}
+\vspace{-12pt}
+
+% ===================== RESEARCH FIELDS =====================
+\section{Research Fields}
+\cvrow{\textbf{Primary fields}: Labor Economics, Health Economics}{\textbf{Secondary fields}: Economic History}
+
+% ===================== EDUCATION =====================
+\section{Education}
+\cventry{University of California, Davis}{Davis, USA}{Ph.D. in Economics}{2021 -- present}
+\cventry{Fudan University}{Shanghai, China}{M.A. in Economics}{2021}
+\cventry{Erasmus University Rotterdam}{Rotterdam, Netherlands}{Exchange Student in Economics}{2019}
+\cventry{East China Normal University}{Shanghai, China}{B.A. in Economics}{2018}
+
+% ===================== PUBLICATIONS =====================
+\section{Publications}
+\paper{``Congestion on the Information Superhighway: Does Economics Have a Working Papers Problem?'' with Lester R. Lusher and Scott E. Carrell. \textit{Journal of Public Economics}, Volume 225, 2023. \ulink{https://www.sciencedirect.com/science/article/abs/pii/S0047272723001603}{[published link]}\,\ulink{https://www.dropbox.com/scl/fi/hhyfzohjrzb8806b87sux/inefficiency_nberwp.pdf?rlkey=ill4zwhiytneqwj31d58uq7w2&st=zu15tdzo&dl=0}{[ungated]}\,\ulink{https://www.nber.org/papers/w29153}{[NBER WP29153]}}
+
+% ===================== WORKING PAPERS =====================
+\section{Working Papers}
+\paper{Job Market Paper --- ``Doctors With(out) Borders: Effects of Easing Occupational Licensing for Foreign Physicians''}
+\paper{``The Effects of Marriage Bar: Evidence from US Teachers in 1900--1940'' with Rebecca Brough}
+\paper{``Cash for Class: The Effect of Paying Students for Full-Time Community College Enrollment'' with Paco Martorell, Scott E. Carrell, Elizabeth Friedmann, and Alice Li}
+
+% ===================== WORKS IN PROGRESS =====================
+\section{Works in Progress}
+\paper{``When D.O.s are Granted M.D. Degree: Evidence from 1962 California Degree Transition''}
+
+% ===================== FELLOWSHIP & AWARDS =====================
+\section{Fellowship \& Awards}
+\cvitem{Russell Sage Foundation Dissertation Fellowship}{2026}
+\cvitem{Dean's Summer Graduate Support Award}{2026}
+\cvitem{ASHEcon Diversity Scholarship}{2026}
+\cvitem{UC President's Lindau Nobel Laureate Meeting Fellowship}{2025}
+\cvitem{Research Grant (*4), UC Davis Economics Department}{2023--26}
+
+% ===================== EXTERNAL CONFERENCES =====================
+\section{External Conferences}
+\bline{\textbf{2026}: Becker Friedman Institute Health Economics Initiative Conference, ASHEcon, ASSA}
+\bline{\textbf{2025}: Economic History Association Meeting, Lindau Nobel Laureate Meeting in Economics Science}
+
+% ===================== EMPLOYMENT =====================
+\section{Employment}
+\cvitem{Research Assistant for Professors Scott Carrell and Paco Martorell, UC Davis}{2022 -- present}
+\cvitem{Research Assistant for Professor Sharon Xuejing Zuo, Fudan University}{2021}
+\cvitem{Research Assistant for Professor Laura Hering, Erasmus University of Rotterdam}{2020}
+
+% ===================== TEACHING =====================
+\section{Teaching}
+\cvgrouphead{University of California, Davis}
+\cvsubitem{Project Manager, Undergraduate Research Fellow Program (15+ students)}{2024, 2025}
+\cvsubitem{Teaching Assistant, Econ 001A: Introductory Microeconomics}{2021, 2022, 2025}
+\cvgrouphead{Fudan University}
+\cvsubitem{Teaching Assistant, Quantitative Economics}{2021}
+\cvsubitem{Teaching Assistant, Industrial Organization}{2020}
+\cvsubitem{Teaching Assistant, Health Economics and Policy}{2019}
+
+% ===================== PROFESSIONAL SERVICE =====================
+\section{Professional Service}
+\cvitem{\textbf{Discussant} ($\times$2), Global Migration Center Student Seminar, UC Davis}{2025}
+\cvitem{\textbf{Co-organizer}, Applied Micro Student Talk, UC Davis}{2023 -- 2025}
+\cvitem{\textbf{Head Organizer}, Gender Economics Reading Group (15+ students), UC Davis}{2021 -- 2022}
+
+% ===================== POLICY =====================
+\section{Policy}
+\paper{``Effects of Financial Aid Expansion for Community College Adult Learners'' with Oded Gurantz, Michal Kurlaender, Elizabeth Friedmann, Paco Martorell. \textit{Submitted.}}
+
+% ===================== OTHER SKILLS =====================
+\section{Other Skills}
+\bline{\textbf{Technical}: Stata, Python, LaTeX, MATLAB, R}
+\bline{\textbf{Language}: Chinese (Native), English (Fluent)}
+
+% ===================== FOOTER =====================
+\vfill
+\begin{center}
+  \textit{Last update: \today}
+\end{center}
+
+\end{document}
