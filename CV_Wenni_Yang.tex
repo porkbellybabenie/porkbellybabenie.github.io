@@ -37,8 +37,8 @@
 % grouped sub-heading (e.g. an institution) with nested items beneath it
 \newcommand{\cvgrouphead}[1]{\par\vspace{3pt}\noindent\hspace*{\bodyindent}\textbf{#1}\par\vspace{1pt}}
 \newcommand{\cvsubitem}[2]{\noindent\hspace*{\dimexpr\bodyindent+1.2em\relax}#1 \hfill \textit{#2} \par}
-% indented body paragraph, wrapped lines hang to the same indent
-\newcommand{\bline}[1]{\par\noindent\hangindent=\bodyindent\hangafter=0\hspace*{\bodyindent}#1\par}
+% indented body paragraph; first and wrapped lines all align at \bodyindent
+\newcommand{\bline}[1]{\par\noindent\hangindent=\bodyindent\hangafter=0 #1\par}
 % research/paper paragraph (block-indented) with gap after
 \newcommand{\paper}[1]{\bline{#1}\vspace{7pt}}
 
