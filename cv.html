@@ -16,15 +16,9 @@
       box-sizing: border-box;
     }
 
-    html, body {
-      height: 100%;
-    }
-
     body {
       font-family: 'Lora', Georgia, serif;
       color: #333;
-      display: flex;
-      flex-direction: column;
     }
 
     /* Header */
@@ -75,11 +69,7 @@
 
     /* CV viewer */
     main {
-      flex: 1;
       padding: 24px 40px;
-      min-height: 0;
-      display: flex;
-      flex-direction: column;
     }
 
     .cv-heading {
@@ -92,8 +82,10 @@
     }
 
     .cv-frame {
+      display: block;
       width: 100%;
-      height: 100%;
+      height: 85vh;
+      min-height: 600px;
       border: 1px solid #e0e0e0;
       border-radius: 12px;
     }
