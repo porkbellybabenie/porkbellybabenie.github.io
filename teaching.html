@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Teaching — Wenni Yang</title>
+  <meta name="description" content="Teaching experience of Wenni Yang, PhD candidate in Economics at UC Davis, including introductory microeconomics and undergraduate research mentoring." />
+  <link rel="canonical" href="https://wenniyang.com/teaching.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=EB+Garamond:ital,wght@0,400;0,500;0,700;1,400&family=Lora:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Lora', Georgia, serif;
+      color: #333;
+    }
+
+    /* Header */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 40px;
+      border-bottom: 1px solid #e0e0e0;
+      background: #fff;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .site-name {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.55rem;
+      font-weight: 700;
+      text-decoration: none;
+      color: #457b9d;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #444;
+      font-size: 0.95rem;
+      font-family: 'Lora', Georgia, serif;
+      padding: 6px 14px;
+      border-radius: 6px;
+      transition: background 0.2s;
+    }
+
+    nav a:hover {
+      background: #f0f0f0;
+    }
+
+    nav a.active {
+      font-weight: 600;
+      color: #111;
+    }
+
+    /* Teaching content */
+    main {
+      max-width: 1100px;
+      margin: 60px auto;
+      padding: 0 40px;
+    }
+
+    .page-heading {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 3.6rem;
+      font-weight: 500;
+      color: #457b9d;
+      text-align: center;
+      margin-bottom: 48px;
+    }
+
+    .teaching-intro {
+      font-family: 'Lora', Georgia, serif;
+      font-size: 1.1rem;
+      line-height: 1.85;
+      color: #444;
+      text-align: center;
+      max-width: 760px;
+      margin: -16px auto 64px;
+    }
+
+    .section-title {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.9rem;
+      font-weight: 400;
+      color: #1d3557;
+      margin-bottom: 24px;
+    }
+
+    .section + .section {
+      margin-top: 64px;
+    }
+
+    .course {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 24px;
+      padding: 10px 0;
+      border-bottom: 1px solid #eee;
+    }
+
+    .course:last-child {
+      border-bottom: none;
+    }
+
+    .course-name {
+      font-family: 'EB Garamond', Georgia, serif;
+      font-size: 1.1rem;
+      color: #457b9d;
+      line-height: 1.5;
+    }
+
+    .course-role {
+      font-family: 'EB Garamond', Georgia, serif;
+      font-size: 1rem;
+      font-style: italic;
+      color: #555;
+    }
+
+    .course-years {
+      font-family: 'EB Garamond', Georgia, serif;
+      font-size: 1rem;
+      font-style: italic;
+      color: #555;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .course-stats {
+      font-family: 'Lora', Georgia, serif;
+      font-size: 0.9rem;
+      line-height: 1.6;
+      color: #555;
+      margin-top: 2px;
+    }
+
+    .all-link {
+      font-family: 'EB Garamond', Georgia, serif;
+      font-size: 1rem;
+      color: #0070f3;
+      text-decoration: none;
+      margin-left: 10px;
+      vertical-align: middle;
+      white-space: nowrap;
+    }
+
+    .all-link:hover {
+      text-decoration: underline;
+    }
+
+    .quotes {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px 40px;
+    }
+
+    .quote {
+      border-left: 3px solid #457b9d;
+      padding: 4px 0 4px 18px;
+    }
+
+    .quote-text {
+      font-family: 'Lora', Georgia, serif;
+      font-size: 1rem;
+      line-height: 1.75;
+      color: #333;
+    }
+
+    .quote-source {
+      font-family: 'Lora', Georgia, serif;
+      font-size: 0.85rem;
+      color: #777;
+      margin-top: 6px;
+    }
+
+    .mentoring-text {
+      font-family: 'EB Garamond', Georgia, serif;
+      font-size: 1.1rem;
+      line-height: 1.7;
+      color: #444;
+      max-width: 850px;
+      margin-bottom: 16px;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        padding: 14px 20px;
+      }
+
+      main {
+        margin: 40px auto;
+        padding: 0 20px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .site-name {
+        font-size: 1.1rem;
+      }
+
+      nav {
+        gap: 2px;
+      }
+
+      nav a {
+        padding: 6px 6px;
+        font-size: 0.85rem;
+      }
+
+      .course {
+        flex-direction: column;
+        gap: 2px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .quotes {
+        grid-template-columns: 1fr;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <a class="site-name" href="index.html">Wenni Yang</a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="research.html">Research</a>
+      <a href="teaching.html" class="active">Teaching</a>
+      <a href="cv.html">CV</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <h1 class="page-heading">Teaching</h1>
+
+    <p class="teaching-intro">I teach with genuine care for my students and their success, in the classroom and beyond.</p>
+
+    <section class="section">
+      <h2 class="section-title">Selected Student Evaluations <a class="all-link" href="teaching_evaluations.pdf" target="_blank" rel="noopener">[Full evaluation summary]</a></h2>
+
+      <div class="quotes">
+        <figure class="quote">
+          <blockquote class="quote-text">&ldquo;I found the TA to be very encouraging of the class&rsquo; approach to problem sets and clear in her explanations on them. She was very approachable and made sure to clarify any difficult topics.&rdquo;</blockquote>
+          <figcaption class="quote-source">Econ 001A, Fall 2025</figcaption>
+        </figure>
+
+        <figure class="quote">
+          <blockquote class="quote-text">&ldquo;I attended all of Wenni&rsquo;s discussions sections and always learned something new from her concise, understandable explanations of practice set answers. She is clearly well-versed regarding microeconomic principles.&rdquo;</blockquote>
+          <figcaption class="quote-source">Econ 001A, Winter 2022</figcaption>
+        </figure>
+
+        <figure class="quote">
+          <blockquote class="quote-text">&ldquo;Wenni Yang made sure we were all on the same page and &hellip; asked if we had any questions, comments, or concerns.&rdquo;</blockquote>
+          <figcaption class="quote-source">Econ 001A, Fall 2025</figcaption>
+        </figure>
+
+        <figure class="quote">
+          <blockquote class="quote-text">&ldquo;She is very kind and help[s] every student solve difficult problems.&rdquo;</blockquote>
+          <figcaption class="quote-source">Econ 001A, Winter 2022</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Teaching Assistant at University of California, Davis</h2>
+
+      <div class="course">
+        <div>
+          <div class="course-name">Econ 001A: Introductory Microeconomics</div>
+          <div class="course-stats">320 students &middot; 10 discussion sections &middot; Overall TA rating 4.2&ndash;4.3/5 (department average 3.9)</div>
+        </div>
+        <div class="course-years">Fall 2021, Winter 2022, Fall 2025</div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Teaching Assistant at Fudan University</h2>
+
+      <div class="course">
+        <div class="course-name">Quantitative Economics</div>
+        <div class="course-years">2021</div>
+      </div>
+
+      <div class="course">
+        <div class="course-name">Industrial Organization</div>
+        <div class="course-years">2020</div>
+      </div>
+
+      <div class="course">
+        <div class="course-name">Health Economics and Policy</div>
+        <div class="course-years">2019</div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Mentoring</h2>
+
+      <p class="mentoring-text">I have been fortunate to work with brilliant undergraduate researchers, who are the cornerstone of my dissertation data collection. I get to know each student&rsquo;s goals and tailor their projects to match, from literature reviews for students exploring whether research is right for them to paid summer research for those ready to take on more. I am proud to support my students&rsquo; success beyond the classroom, including serving as their reference as they take their next steps.</p>
+
+      <div class="course">
+        <div>
+          <div class="course-name">Undergraduate Research Fellow Program, UC Davis (15+ students)</div>
+          <div class="course-role">Project Manager</div>
+        </div>
+        <div class="course-years">2024, 2025</div>
+      </div>
+    </section>
+
+  </main>
+
+</body>
+</html>
