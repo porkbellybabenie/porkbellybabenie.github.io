@@ -1,19 +1,21 @@
 \documentclass[11pt]{article}
 
 \usepackage[letterpaper,top=0.5in,bottom=0.5in,left=0.5in,right=0.5in]{geometry}
-% NOTE: compile with xelatex (not pdflatex) — needed for the Cormorant Garamond name font
-\usepackage{fontspec} % body stays in the default Computer Modern (same look as before)
-% name uses Cormorant Garamond, the same family as the website headings
-\newfontfamily{\namefont}{CormorantGaramond-Medium.ttf}[
+% NOTE: compile with xelatex (not pdflatex) — needed for the Bell MT font files
+\usepackage{fontspec}
+% Whole CV set in Bell MT (commercial Microsoft/Monotype serif).
+% Font files live in fonts/ and are gitignored — local compile only, never published.
+\setmainfont{BellMT.ttf}[
   Path=fonts/,
-  BoldFont=CormorantGaramond-SemiBold.ttf]
+  BoldFont=BellMTBold.ttf,
+  ItalicFont=BellMTItalic.ttf]
 \usepackage{titlesec}
 \usepackage[hidelinks]{hyperref}
 
 % ---------- section headers: large small-caps + full-width rule ----------
 \titleformat{\section}
   {\large\scshape}{}{0em}{}[{\titlerule[0.6pt]}]
-\titlespacing*{\section}{0pt}{14pt}{6pt}
+\titlespacing*{\section}{0pt}{11pt}{5pt}
 
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{0pt}
@@ -40,63 +42,82 @@
 % indented body paragraph; first and wrapped lines all align at \bodyindent
 \newcommand{\bline}[1]{\par\noindent\hangindent=\bodyindent\hangafter=0 #1\par}
 % research/paper paragraph (block-indented) with gap after
-\newcommand{\paper}[1]{\bline{#1}\vspace{7pt}}
+\newcommand{\paper}[1]{\bline{#1}\vspace{5pt}}
+% paper title + indented, smaller upright annotation beneath
+\newcommand{\papernote}[2]{%
+  \bline{#1}%
+  \par\noindent\hangindent=\dimexpr\bodyindent+1.2em\relax
+  \hspace*{\dimexpr\bodyindent+1.2em\relax}{\small #2}\par
+  \vspace{5pt}%
+}
+% phrase separator inside annotations (math cdot = portable, Bell MT lacks U+00B7)
+\newcommand{\ds}{\hspace{0.35em}$\cdot$\hspace{0.35em}}
+% references: one contact block, three in one row
+% \refentry{Name}{Title, Institution}{email}{phone}
+\newcommand{\refentry}[4]{%
+  \begin{minipage}[t]{0.30\textwidth}
+    \textbf{#1}\par
+    #2\par
+    \ulink{mailto:#3}{#3}\par
+    #4
+  \end{minipage}%
+}
 
 \begin{document}
 
 % ===================== HEADER =====================
 \begin{center}
-  {\namefont\huge Wenni Yang}\\[5pt]
-  Citizenship: Chinese\\[2pt]
+  {\huge Wenni Yang}\\[5pt]
+  Citizenship: Chinese (U.S. permanent residency pending)\\[2pt]
   One Shields Avenue, Davis, CA 95616\\[2pt]
-  (+1) 530-761-6417 \,$\vert$\, \ulink{mailto:wniyang@ucdavis.edu}{wniyang@ucdavis.edu}
+  (+1) 530-761-6417 \,|\, \ulink{mailto:wniyang@ucdavis.edu}{wniyang@ucdavis.edu}
 \end{center}
 \vspace{-12pt}
 
 % ===================== RESEARCH FIELDS =====================
 \section{Research Fields}
-\cvrow{\textbf{Primary fields}: Labor Economics, Health Economics}{\textbf{Secondary fields}: Economic History}
+\cvrow{\textbf{Primary fields}: Labor Economics, Health Economics}{\textbf{Secondary fields}: Economics of Education, Economic History}
 
 % ===================== EDUCATION =====================
 \section{Education}
-\cventry{University of California, Davis}{Davis, USA}{Ph.D. in Economics}{2021 -- present}
-\cventry{Fudan University}{Shanghai, China}{M.A. in Economics}{2021}
-\cventry{Erasmus University Rotterdam}{Rotterdam, Netherlands}{Exchange Student in Economics}{2019}
-\cventry{East China Normal University}{Shanghai, China}{B.A. in Economics}{2018}
+\cvitem{Ph.D. in Economics, University of California, Davis}{2021--Winter 2027 (expected)}
+\cvitem{M.A. in Economics, Fudan University, Shanghai}{2021}
+\cvitem{Exchange Student in Economics, Erasmus University Rotterdam}{2019}
+\cvitem{B.A. in Economics (Insurance Specialization), East China Normal University, Shanghai}{2018}
 
 % ===================== PUBLICATIONS =====================
 \section{Publications}
-\paper{``Congestion on the Information Superhighway: Does Economics Have a Working Papers Problem?'' with Lester R. Lusher and Scott E. Carrell. \textit{Journal of Public Economics}, Volume 225, 2023. \allowbreak\ulink{https://www.sciencedirect.com/science/article/abs/pii/S0047272723001603}{[published link]} \allowbreak\ulink{https://www.dropbox.com/scl/fi/hhyfzohjrzb8806b87sux/inefficiency_nberwp.pdf?rlkey=ill4zwhiytneqwj31d58uq7w2&st=zu15tdzo&dl=0}{[ungated]} \allowbreak\ulink{https://www.nber.org/papers/w29153}{[NBER WP29153]}}
+\papernote{``Congestion on the Information Superhighway: Does Economics Have a Working Papers Problem?'' with Lester R. Lusher and Scott E. Carrell. \textit{Journal of Public Economics}, Volume 225, 2023. \allowbreak\ulink{https://www.sciencedirect.com/science/article/abs/pii/S0047272723001603}{[published link]} \allowbreak\ulink{https://www.dropbox.com/scl/fi/hhyfzohjrzb8806b87sux/inefficiency_nberwp.pdf?rlkey=ill4zwhiytneqwj31d58uq7w2&st=zu15tdzo&dl=0}{[ungated]} \allowbreak\ulink{https://www.nber.org/papers/w29153}{[NBER WP29153]}}
 
 % ===================== WORKING PAPERS =====================
 \section{Working Papers}
-\paper{Job Market Paper --- ``Doctors With(out) Borders: Effects of Easing Occupational Licensing for Foreign Physicians''}
-\paper{``The Effects of Marriage Bar: Evidence from US Teachers in 1900--1940'' with Rebecca Brough}
-\paper{``Cash for Class: The Effect of Paying Students for Full-Time Community College Enrollment'' with Paco Martorell, Scott E. Carrell, Elizabeth Friedmann, and Alice Li}
+\papernote{\textbf{Job Market Paper}---``Doctors With(out) Borders: Effects of Easing Occupational Licensing for Foreign-trained Physicians''}{Newly digitized state licensure records\ds AMA physician directories, individuals linked across years\ds County-level AHA hospital and NCHS mortality data\ds Staggered DiD across state reform dates}
+\papernote{``The Effects of Marriage Bar: Evidence from US Teachers in 1900--1940,'' with Rebecca Brough}{Hand-collected marriage bar adoption and repeal, U.S. city school boards\ds Newspapers and journals\ds 1880--1940 Census\ds Staggered DiD across city-level adoption timing}
+\papernote{``Cash for Class: The Effect of Paying Students for Full-Time Community College Enrollment,'' with Paco Martorell, Scott E. Carrell, Elizabeth Friedmann, and Alice Li}{Student-level linkage across large administrative datasets\ds Regression discontinuity at an income eligibility threshold}
 
-% ===================== WORKS IN PROGRESS (hidden for now) =====================
-% To restore, uncomment the two lines below.
-%\section{Works in Progress}
-%\paper{``When D.O.s are Granted M.D. Degree: Evidence from 1962 California Degree Transition''}
+% ===================== POLICY REPORTS =====================
+\section{Policy Reports}
+\paper{``Effects of Financial Aid Expansion for Community College Adult Learners,'' with Oded Gurantz, Michal Kurlaender, Elizabeth Friedmann, and Paco Martorell. \textit{Revise and Resubmit.}}
 
-% ===================== FELLOWSHIP & AWARDS =====================
-\section{Fellowship \& Awards}
+% ===================== WORKS IN PROGRESS =====================
+\section{Works in Progress}
+\paper{``Competition Without Entry: Evidence from California's 1961 DO--MD Merger''}
+\paper{``Hospital Desegregation and the Black Medical Profession,'' with Mark Anderson}
+\paper{``Addressing OCR Failures in Economic History: An Agentic AI Approach,'' with Joshua Barnett}
+\paper{``Long-run Health Impact of Accessing Licensed Physicians''}
+
+% ===================== FELLOWSHIPS AND AWARDS =====================
+\section{Fellowships and Awards}
 \cvitem{Russell Sage Foundation Dissertation Fellowship}{2026}
 \cvitem{Dean's Summer Graduate Support Award}{2026}
 \cvitem{ASHEcon Diversity Scholarship}{2026}
 \cvitem{UC President's Lindau Nobel Laureate Meeting Fellowship}{2025}
-\cvitem{Research Grant (*4), UC Davis Economics Department}{2023--26}
+\cvitem{Research Grant (*4), UC Davis Economics Department}{2023--2026}
 
-% ===================== EXTERNAL CONFERENCES =====================
-\section{External Conferences}
+% ===================== EXTERNAL CONFERENCE PRESENTATIONS =====================
+\section{External Conference Presentations}
 \bline{\textbf{2026}: Becker Friedman Institute Health Economics Initiative Conference, ASHEcon, ASSA}
 \bline{\textbf{2025}: Economic History Association Meeting, Lindau Nobel Laureate Meeting in Economics Science}
-
-% ===================== EMPLOYMENT =====================
-\section{Employment}
-\cvitem{Research Assistant for Professors Scott Carrell and Paco Martorell, UC Davis}{2022 -- present}
-\cvitem{Research Assistant for Professor Sharon Xuejing Zuo, Fudan University}{2021}
-\cvitem{Research Assistant for Professor Laura Hering, Erasmus University of Rotterdam}{2020}
 
 % ===================== TEACHING =====================
 \section{Teaching}
@@ -108,20 +129,32 @@
 \cvsubitem{Teaching Assistant, Industrial Organization}{2020}
 \cvsubitem{Teaching Assistant, Health Economics and Policy}{2019}
 
-% ===================== PROFESSIONAL SERVICE =====================
-\section{Professional Service}
-\cvitem{\textbf{Discussant} ($\times$2), Global Migration Center Student Seminar, UC Davis}{2025}
-\cvitem{\textbf{Co-organizer}, Applied Micro Student Talk, UC Davis}{2023 -- 2025}
-\cvitem{\textbf{Head Organizer}, Gender Economics Reading Group (15+ students), UC Davis}{2021 -- 2022}
+% ===================== EMPLOYMENT =====================
+\section{Employment}
+\cvitem{Research Assistant for Professors Scott Carrell and Paco Martorell, UC Davis}{2022--present}
+\cvitem{Research Assistant for Professor Sharon Xuejing Zuo, Fudan University}{2021}
+\cvitem{Mergers \& Acquisitions Intern, Fosun International, Shanghai}{Dec. 2020--May 2021}
+\cvitem{Research Assistant for Professor Laura Hering, Erasmus University of Rotterdam}{2020}
 
-% ===================== POLICY =====================
-\section{Policy}
-\paper{``Effects of Financial Aid Expansion for Community College Adult Learners'' with Oded Gurantz, Michal Kurlaender, Elizabeth Friedmann, Paco Martorell. \textit{Submitted.}}
+% ===================== SERVICE AND LEADERSHIP =====================
+\section{Service and Leadership}
+\cvitem{\textbf{Referee}: \textit{Economic Inquiry}}{2026}
+\cvitem{\textbf{Discussant} (×2): Global Migration Center Student Seminar, UC Davis}{2025}
+\cvitem{\textbf{Co-organizer}: Applied Micro Student Talk, UC Davis}{2023--2025}
+\cvitem{\textbf{Head Organizer}: Gender Economics Reading Group (15+ students), UC Davis}{2021--2022}
 
 % ===================== OTHER SKILLS =====================
 \section{Other Skills}
-\bline{\textbf{Technical}: Stata, Python, LaTeX, MATLAB, R}
+\bline{\textbf{Software}: Stata, R, Python, SQL, MATLAB, LaTeX}
+\bline{\textbf{Data}: Large-scale administrative data; historical data digitization (OCR / LLM-assisted extraction) of AMA physician directories and state licensure records; record linkage and fuzzy matching}
 \bline{\textbf{Language}: Chinese (Native), English (Fluent)}
+
+% ===================== REFERENCES =====================
+\section{References}
+\noindent\hspace*{\bodyindent}%
+\refentry{Santiago P\'erez}{Associate Professor of Economics\\University of California, Davis}{seperez@ucdavis.edu}{(+1) 650-739-3478}\hspace{0.02\textwidth}%
+\refentry{Marianne P. Bitler}{Professor and Chair of Economics\\University of California, Davis}{bitler@ucdavis.edu}{(+1) 415-305-5644}\hspace{0.02\textwidth}%
+\refentry{Giovanni Peri}{Professor of Economics\\University of California, Davis}{gperi@ucdavis.edu}{(+1) 510-734-3774}\par
 
 % ===================== FOOTER =====================
 \vfill
