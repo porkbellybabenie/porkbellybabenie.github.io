@@ -8,7 +8,7 @@
   <link rel="canonical" href="https://wenniyang.com/research.html" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=EB+Garamond:ital,wght@0,400;0,500;0,700;1,400&family=Lora:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Lato:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet" />
   <style>
     * {
       margin: 0;
@@ -17,7 +17,7 @@
     }
 
     body {
-      font-family: 'Lora', Georgia, serif;
+      font-family: 'Lato', Arial, sans-serif;
       color: #333;
     }
 
@@ -70,17 +70,18 @@
     /* Research content */
     main {
       max-width: 1100px;
-      margin: 60px auto;
+      margin: 16px auto 60px;
       padding: 0 40px;
     }
 
     .page-heading {
       font-family: 'Cormorant Garamond', Georgia, serif;
-      font-size: 3.6rem;
+      font-size: 2.6rem;
       font-weight: 500;
       color: #457b9d;
       text-align: center;
-      margin-bottom: 48px;
+      line-height: 1.1;
+      margin-bottom: 14px;
     }
 
     .section-title {
@@ -88,19 +89,27 @@
       font-size: 1.9rem;
       font-weight: 400;
       color: #1d3557;
-      margin-bottom: 40px;
+      margin-bottom: 16px;
     }
 
     .section + .section {
-      margin-top: 88px;
+      margin-top: 30px;
     }
 
     .paper {
       margin-bottom: 14px;
     }
 
+    .paper:last-child {
+      margin-bottom: 0;
+    }
+
+    .paper.jmp-paper {
+      margin-bottom: 22px;
+    }
+
     .paper-title {
-      font-family: 'EB Garamond', Georgia, serif;
+      font-family: 'Lato', Arial, sans-serif;
       font-size: 1rem;
       font-weight: 400;
       color: #457b9d;
@@ -108,8 +117,18 @@
       margin-bottom: 6px;
     }
 
+    .title-link {
+      color: #0070f3;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .title-link:hover {
+      text-decoration: underline;
+    }
+
     .paper-meta {
-      font-family: 'EB Garamond', Georgia, serif;
+      font-family: 'Lato', Arial, sans-serif;
       font-size: 1rem;
       font-style: italic;
       color: #555;
@@ -127,7 +146,7 @@
     }
 
     .paper-authors {
-      font-family: 'EB Garamond', Georgia, serif;
+      font-family: 'Lato', Arial, sans-serif;
       font-size: 1rem;
       font-weight: 400;
       font-style: italic;
@@ -145,12 +164,11 @@
     }
 
     .jmp-tag {
-      font-family: 'EB Garamond', Georgia, serif;
+      font-family: 'Lato', Arial, sans-serif;
       font-size: 1rem;
       font-style: normal;
       font-weight: 700;
       color: #457b9d;
-      margin-left: 6px;
     }
 
     .paper-abstract {
@@ -178,7 +196,7 @@
       display: inline-flex;
       align-items: center;
       gap: 7px;
-      font-family: 'EB Garamond', Georgia, serif;
+      font-family: 'Lato', Arial, sans-serif;
       font-size: 1rem;
       font-style: italic;
       color: #555;
@@ -206,7 +224,7 @@
     }
 
     .abstract-text {
-      font-family: 'EB Garamond', Georgia, serif;
+      font-family: 'Lato', Arial, sans-serif;
       font-size: 0.95rem;
       line-height: 1.7;
       color: #555;
@@ -261,12 +279,11 @@
     <section class="section">
       <h1 class="section-title">Working Papers</h1>
 
-      <div class="paper">
-        <div class="paper-title">Doctors With(out) Borders: Effects of Easing Occupational Licensing for Foreign-trained Physicians <span class="jmp-tag">Job Market Paper</span></div>
-        <div class="paper-meta"><a href="Yang_JMP.pdf" target="_blank" rel="noopener">[Link]</a></div>
+      <div class="paper jmp-paper">
+        <div class="paper-title"><span class="jmp-tag">Job Market Paper:</span> Doctors With(out) Borders: Effects of Easing Occupational Licensing for Foreign-trained Physicians <a class="title-link" href="Yang_JMP.pdf" target="_blank" rel="noopener">[Latest Draft]</a></div>
         <details class="abstract">
           <summary><span class="arrow">&#9662;</span> Abstract</summary>
-          <p class="abstract-text">Occupational licensing can serve the public interest by screening for quality or the private interest by restricting entry and sustaining rents. Yet most licensing requirements reflect both rationales, making them difficult to separate empirically. This paper exploits a non-quality-related margin of licensing requirements to study the consequences of entry-restricting regulation. I examine a major wave of state medical licensing reforms from 1960 through the 1970s, when more than 30 states removed citizenship requirements for foreign medical graduate (FMG) licensure. Using a newly digitized individual-level dataset covering physicians in the U.S. and a staggered difference-in-differences design, I find that removing citizenship requirements increased annual first-time FMG licensing flows by at least 20 percent relative to their pre-reform baseline. The effect was concentrated after the federal government relaxed the home-country return requirement, indicating that state licensing and federal visa barriers acted as complementary constraints. This entry response translated only into a short-run increase in the stock of licensed FMGs, as declines among earlier-licensed FMGs offset new entry in the medium run. In high-Medicaid-exposure counties, FMG entry coincided with declines in U.S.-trained physicians, alongside increases in nonprofit hospital capacity and utilization. In low-Medicaid-exposure counties, both physician groups expanded, but hospital capacity did not increase. Together, the results show that removing a licensing barrier not directly tied to clinical quality reallocated physician supply rather than uniformly expanding it, with distributional heterogeneity shaped by local insurance markets.</p>
+          <p class="abstract-text">This paper studies how easing licensing requirements for non-U.S.-citizen physicians affects the supply and composition of the physician workforce and hospitals&rsquo; investment in other inputs. From 1960 through the 1970s, more than thirty states removed citizenship requirements for medical licensure. I use foreign medical graduates (FMGs) as a proxy for non-citizen physicians. Using newly assembled licensure and physician data, I show that easing a licensing requirement changes physician supply through expanding entry, with a suggestive decline among established foreign incumbents, no detectable crowd-out of U.S.-trained physicians, and no short-run deterioration in the average quality of the licensed FMG stock. Hospitals respond by expanding staffed beds by about 4 percent. Effects are concentrated among counties with above-median Medicaid exposure, suggesting physician supply is a binding constraint on hospital input adjustment in anticipation of a growth in demand for health care. Estimated effects on population mortality are imprecise. These effects emerge primarily after the federal government relaxed J-1 visa return requirements in 1970, indicating complementary constraints between state and federal regulation.</p>
         </details>
       </div>
 
@@ -301,6 +318,24 @@
           <summary><span class="arrow">&#9662;</span> Abstract</summary>
           <p class="abstract-text">Using data on the NBER working paper series, we show that the dissemination of economics research suffers from a congestion problem: An increase in the number of weekly released working papers on average reduces downloads, abstract views, and media attention for each paper. Subsequent publishing and citation outcomes are harmed as well. Papers written by prominent authors are not immune to this congestion effect. Finally, suggestive evidence on viewership and downloads implies that working papers substitute for the dissemination function of publication. Our results highlight how readers face time and cognitive constraints, with increased congestion in working papers leading to real impacts on how research is consumed.</p>
         </details>
+      </div>
+
+    </section>
+
+    <!-- WORKS IN PROGRESS -->
+    <section class="section">
+      <h1 class="section-title">Works in Progress</h1>
+
+      <div class="paper">
+        <div class="paper-title">Competition Without Entry: Evidence from California&rsquo;s 1961 DO&ndash;MD Merger</div>
+      </div>
+
+      <div class="paper">
+        <div class="paper-title">Addressing OCR Failures in Economic History: An Agentic AI Approach <span class="paper-authors">with Joshua Barnett.</span></div>
+      </div>
+
+      <div class="paper">
+        <div class="paper-title">Long-run Health Impact of Accessing Licensed Physicians</div>
       </div>
 
     </section>

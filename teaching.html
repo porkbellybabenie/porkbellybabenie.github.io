@@ -8,7 +8,7 @@
   <link rel="canonical" href="https://wenniyang.com/teaching.html" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=EB+Garamond:ital,wght@0,400;0,500;0,700;1,400&family=Lora:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Lato:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet" />
   <style>
     * {
       margin: 0;
@@ -17,7 +17,7 @@
     }
 
     body {
-      font-family: 'Lora', Georgia, serif;
+      font-family: 'Lato', Arial, sans-serif;
       color: #333;
     }
 
@@ -70,27 +70,18 @@
     /* Teaching content */
     main {
       max-width: 1100px;
-      margin: 60px auto;
+      margin: 16px auto 60px;
       padding: 0 40px;
     }
 
     .page-heading {
       font-family: 'Cormorant Garamond', Georgia, serif;
-      font-size: 3.6rem;
+      font-size: 2.6rem;
       font-weight: 500;
       color: #457b9d;
       text-align: center;
-      margin-bottom: 48px;
-    }
-
-    .teaching-intro {
-      font-family: 'Lora', Georgia, serif;
-      font-size: 1.1rem;
-      line-height: 1.85;
-      color: #444;
-      text-align: center;
-      max-width: 760px;
-      margin: -16px auto 64px;
+      line-height: 1.1;
+      margin-bottom: 14px;
     }
 
     .section-title {
@@ -98,11 +89,11 @@
       font-size: 1.9rem;
       font-weight: 400;
       color: #1d3557;
-      margin-bottom: 24px;
+      margin-bottom: 16px;
     }
 
     .section + .section {
-      margin-top: 64px;
+      margin-top: 30px;
     }
 
     .course {
@@ -110,7 +101,7 @@
       justify-content: space-between;
       align-items: baseline;
       gap: 24px;
-      padding: 10px 0;
+      padding: 8px 0;
       border-bottom: 1px solid #eee;
     }
 
@@ -119,22 +110,22 @@
     }
 
     .course-name {
-      font-family: 'EB Garamond', Georgia, serif;
-      font-size: 1.1rem;
+      font-family: 'Lato', Arial, sans-serif;
+      font-size: 1rem;
       color: #457b9d;
       line-height: 1.5;
     }
 
     .course-role {
-      font-family: 'EB Garamond', Georgia, serif;
+      font-family: 'Lato', Arial, sans-serif;
       font-size: 1rem;
       font-style: italic;
       color: #555;
     }
 
     .course-years {
-      font-family: 'EB Garamond', Georgia, serif;
-      font-size: 1rem;
+      font-family: 'Lato', Arial, sans-serif;
+      font-size: 0.95rem;
       font-style: italic;
       color: #555;
       white-space: nowrap;
@@ -142,7 +133,7 @@
     }
 
     .course-stats {
-      font-family: 'Lora', Georgia, serif;
+      font-family: 'Lato', Arial, sans-serif;
       font-size: 0.9rem;
       line-height: 1.6;
       color: #555;
@@ -150,7 +141,7 @@
     }
 
     .all-link {
-      font-family: 'EB Garamond', Georgia, serif;
+      font-family: 'Lato', Arial, sans-serif;
       font-size: 1rem;
       color: #0070f3;
       text-decoration: none;
@@ -175,26 +166,72 @@
     }
 
     .quote-text {
-      font-family: 'Lora', Georgia, serif;
+      font-family: 'Lato', Arial, sans-serif;
       font-size: 1rem;
       line-height: 1.75;
       color: #333;
     }
 
     .quote-source {
-      font-family: 'Lora', Georgia, serif;
+      font-family: 'Lato', Arial, sans-serif;
       font-size: 0.85rem;
       color: #777;
       margin-top: 6px;
     }
 
-    .mentoring-text {
-      font-family: 'EB Garamond', Georgia, serif;
-      font-size: 1.1rem;
-      line-height: 1.7;
-      color: #444;
-      max-width: 850px;
-      margin-bottom: 16px;
+    .course-group + .course-group {
+      margin-top: 14px;
+    }
+
+    .group-title {
+      font-family: 'Lato', Arial, sans-serif;
+      font-size: 1rem;
+      font-weight: 400;
+      color: #222;
+      margin-bottom: 4px;
+    }
+
+    .course-group .course {
+      margin-left: 1.2em;
+    }
+
+    .course.no-border {
+      border-bottom: none;
+    }
+
+    .course-stats .all-link {
+      font-size: inherit;
+      margin-left: 0;
+      vertical-align: baseline;
+    }
+
+    .eval-links {
+      white-space: nowrap;
+    }
+
+    .link-button {
+      background: none;
+      border: 0;
+      padding: 0;
+      font: inherit;
+      color: #0070f3;
+      cursor: pointer;
+    }
+
+    .link-button:hover {
+      text-decoration: underline;
+    }
+
+    .selected-comments {
+      margin: 14px 0 0 1.2em;
+    }
+
+    .selected-comments[hidden] {
+      display: none;
+    }
+
+    .sub-lines {
+      margin-left: 1.2em;
     }
 
     @media (max-width: 768px) {
@@ -252,80 +289,83 @@
 
     <h1 class="page-heading">Teaching</h1>
 
-    <p class="teaching-intro">I teach with genuine care for my students and their success, in the classroom and beyond.</p>
 
     <section class="section">
-      <h2 class="section-title">Selected Student Evaluations <a class="all-link" href="teaching_evaluations.pdf" target="_blank" rel="noopener">[Full evaluation summary]</a></h2>
+      <h2 class="section-title">Teaching Assistant</h2>
 
-      <div class="quotes">
-        <figure class="quote">
-          <blockquote class="quote-text">&ldquo;I found the TA to be very encouraging of the class&rsquo; approach to problem sets and clear in her explanations on them. She was very approachable and made sure to clarify any difficult topics.&rdquo;</blockquote>
-          <figcaption class="quote-source">Econ 001A, Fall 2025</figcaption>
-        </figure>
-
-        <figure class="quote">
-          <blockquote class="quote-text">&ldquo;I attended all of Wenni&rsquo;s discussions sections and always learned something new from her concise, understandable explanations of practice set answers. She is clearly well-versed regarding microeconomic principles.&rdquo;</blockquote>
-          <figcaption class="quote-source">Econ 001A, Winter 2022</figcaption>
-        </figure>
-
-        <figure class="quote">
-          <blockquote class="quote-text">&ldquo;Wenni Yang made sure we were all on the same page and &hellip; asked if we had any questions, comments, or concerns.&rdquo;</blockquote>
-          <figcaption class="quote-source">Econ 001A, Fall 2025</figcaption>
-        </figure>
-
-        <figure class="quote">
-          <blockquote class="quote-text">&ldquo;She is very kind and help[s] every student solve difficult problems.&rdquo;</blockquote>
-          <figcaption class="quote-source">Econ 001A, Winter 2022</figcaption>
-        </figure>
-      </div>
-    </section>
-
-    <section class="section">
-      <h2 class="section-title">Teaching Assistant at University of California, Davis</h2>
-
-      <div class="course">
-        <div>
-          <div class="course-name">Econ 001A: Introductory Microeconomics</div>
-          <div class="course-stats">320 students &middot; 10 discussion sections &middot; Overall TA rating 4.2&ndash;4.3/5 (department average 3.9)</div>
+      <div class="course-group">
+        <h3 class="group-title">University of California, Davis</h3>
+        <div class="course no-border">
+          <div>
+            <div class="course-name">Econ 001A: Introductory Microeconomics</div>
+            <div class="course-stats">320 students &middot; 10 discussion sections</div>
+            <div class="course-stats">Teaching Evaluation 4.3 out of 5 (department average 3.9) <span class="eval-links"><a class="all-link" href="teaching_evaluations.pdf" target="_blank" rel="noopener">(Complete)</a> <button type="button" class="link-button" aria-expanded="false" aria-controls="selected-comments">(Selected)</button></span></div>
+          </div>
+          <div class="course-years">Fall 2021, Winter 2022, Fall 2025</div>
         </div>
-        <div class="course-years">Fall 2021, Winter 2022, Fall 2025</div>
+        <div class="quotes selected-comments" id="selected-comments" hidden>
+          <figure class="quote">
+            <blockquote class="quote-text">&ldquo;I found the TA to be very encouraging of the class&rsquo; approach to problem sets and clear in her explanations on them. She was very approachable and made sure to clarify any difficult topics.&rdquo;</blockquote>
+            <figcaption class="quote-source">Econ 001A, Fall 2025</figcaption>
+          </figure>
+
+          <figure class="quote">
+            <blockquote class="quote-text">&ldquo;I attended all of Wenni&rsquo;s discussions sections and always learned something new from her concise, understandable explanations of practice set answers. She is clearly well-versed regarding microeconomic principles.&rdquo;</blockquote>
+            <figcaption class="quote-source">Econ 001A, Winter 2022</figcaption>
+          </figure>
+
+          <figure class="quote">
+            <blockquote class="quote-text">&ldquo;Wenni Yang made sure we were all on the same page and &hellip; asked if we had any questions, comments, or concerns.&rdquo;</blockquote>
+            <figcaption class="quote-source">Econ 001A, Fall 2025</figcaption>
+          </figure>
+
+          <figure class="quote">
+            <blockquote class="quote-text">&ldquo;She is very kind and help[s] every student solve difficult problems.&rdquo;</blockquote>
+            <figcaption class="quote-source">Econ 001A, Winter 2022</figcaption>
+          </figure>
+        </div>
       </div>
-    </section>
 
-    <section class="section">
-      <h2 class="section-title">Teaching Assistant at Fudan University</h2>
-
-      <div class="course">
-        <div class="course-name">Quantitative Economics</div>
-        <div class="course-years">2021</div>
-      </div>
-
-      <div class="course">
-        <div class="course-name">Industrial Organization</div>
-        <div class="course-years">2020</div>
-      </div>
-
-      <div class="course">
-        <div class="course-name">Health Economics and Policy</div>
-        <div class="course-years">2019</div>
+      <div class="course-group">
+        <h3 class="group-title">Fudan University</h3>
+        <div class="course">
+          <div class="course-name">Quantitative Economics</div>
+          <div class="course-years">2021</div>
+        </div>
+        <div class="course">
+          <div class="course-name">Industrial Organization</div>
+          <div class="course-years">2020</div>
+        </div>
+        <div class="course">
+          <div class="course-name">Health Economics and Policy</div>
+          <div class="course-years">2019</div>
+        </div>
       </div>
     </section>
 
     <section class="section">
       <h2 class="section-title">Mentoring</h2>
 
-      <p class="mentoring-text">I have been fortunate to work with brilliant undergraduate researchers, who are the cornerstone of my dissertation data collection. I get to know each student&rsquo;s goals and tailor their projects to match, from literature reviews for students exploring whether research is right for them to paid summer research for those ready to take on more. I am proud to support my students&rsquo; success beyond the classroom, including serving as their reference as they take their next steps.</p>
-
-      <div class="course">
+      <div class="course no-border">
         <div>
-          <div class="course-name">Undergraduate Research Fellow Program, UC Davis (15+ students)</div>
-          <div class="course-role">Project Manager</div>
+          <div class="course-name">Undergraduate Research Fellow Program, UC Davis</div>
+          <div class="sub-lines">
+            <div class="course-stats">I work with over 15 brilliant undergraduate researchers, who are the cornerstone of my dissertation data collection.</div>
+          </div>
         </div>
         <div class="course-years">2024, 2025</div>
       </div>
     </section>
 
+
   </main>
 
+  <script>
+    document.querySelector('.link-button').addEventListener('click', function () {
+      var box = document.getElementById('selected-comments');
+      box.hidden = !box.hidden;
+      this.setAttribute('aria-expanded', String(!box.hidden));
+    });
+  </script>
 </body>
 </html>

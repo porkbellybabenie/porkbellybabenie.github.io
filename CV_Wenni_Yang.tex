@@ -37,7 +37,7 @@
 % single line: description + italic date
 \newcommand{\cvitem}[2]{\cvrow{#1}{\textit{#2}}}
 % grouped sub-heading (e.g. an institution) with nested items beneath it
-\newcommand{\cvgrouphead}[1]{\par\vspace{3pt}\noindent\hspace*{\bodyindent}\textbf{#1}\par\vspace{1pt}}
+\newcommand{\cvgrouphead}[1]{\par\vspace{3pt}\noindent\hspace*{\bodyindent}#1\par\vspace{1pt}}
 \newcommand{\cvsubitem}[2]{\noindent\hspace*{\dimexpr\bodyindent+1.2em\relax}#1 \hfill \textit{#2} \par}
 % indented body paragraph; first and wrapped lines all align at \bodyindent
 \newcommand{\bline}[1]{\par\noindent\hangindent=\bodyindent\hangafter=0 #1\par}
@@ -63,6 +63,8 @@
   \end{minipage}%
 }
 
+\usepackage{needspace}
+
 \begin{document}
 
 % ===================== HEADER =====================
@@ -70,7 +72,7 @@
   {\huge Wenni Yang}\\[5pt]
   Citizenship: Chinese (U.S. permanent residency pending)\\[2pt]
   One Shields Avenue, Davis, CA 95616\\[2pt]
-  (+1) 530-761-6417 \,|\, \ulink{mailto:wniyang@ucdavis.edu}{wniyang@ucdavis.edu}
+  (+1) 530-761-6417 \,|\, \ulink{mailto:wniyang@ucdavis.edu}{wniyang@ucdavis.edu} \,|\, \ulink{https://wenniyang.com}{wenniyang.com}
 \end{center}
 \vspace{-12pt}
 
@@ -80,41 +82,41 @@
 
 % ===================== EDUCATION =====================
 \section{Education}
-\cvitem{Ph.D. in Economics, University of California, Davis}{2021--Winter 2027 (expected)}
+% Graduation date changed 2026-10-04 (Wenni: June 2027). Previous line, kept for reference:
+% \cvitem{Ph.D. in Economics, University of California, Davis}{2021--Winter 2027 (expected)}
+\cvitem{Ph.D. in Economics, University of California, Davis}{2021--June 2027 (expected)}
 \cvitem{M.A. in Economics, Fudan University, Shanghai}{2021}
 \cvitem{Exchange Student in Economics, Erasmus University Rotterdam}{2019}
 \cvitem{B.A. in Economics (Insurance Specialization), East China Normal University, Shanghai}{2018}
 
 % ===================== PUBLICATIONS =====================
 \section{Publications}
-\papernote{``Congestion on the Information Superhighway: Does Economics Have a Working Papers Problem?'' with Lester R. Lusher and Scott E. Carrell. \textit{Journal of Public Economics}, Volume 225, 2023. \allowbreak\ulink{https://www.sciencedirect.com/science/article/abs/pii/S0047272723001603}{[published link]} \allowbreak\ulink{https://www.dropbox.com/scl/fi/hhyfzohjrzb8806b87sux/inefficiency_nberwp.pdf?rlkey=ill4zwhiytneqwj31d58uq7w2&st=zu15tdzo&dl=0}{[ungated]} \allowbreak\ulink{https://www.nber.org/papers/w29153}{[NBER WP29153]}}
+\papernote{``Congestion on the Information Superhighway: Inefficiencies in Economics Working Papers'' with Lester R. Lusher and Scott E. Carrell. \textit{Journal of Public Economics}, Volume 225, 2023. \allowbreak\ulink{https://www.sciencedirect.com/science/article/abs/pii/S0047272723001603}{[published link]} \allowbreak\ulink{https://www.dropbox.com/scl/fi/hhyfzohjrzb8806b87sux/inefficiency_nberwp.pdf?rlkey=ill4zwhiytneqwj31d58uq7w2&st=zu15tdzo&dl=0}{[ungated]} \allowbreak\ulink{https://www.nber.org/papers/w29153}{[NBER WP29153]}}
 
 % ===================== WORKING PAPERS =====================
 \section{Working Papers}
-\papernote{\textbf{Job Market Paper}---``Doctors With(out) Borders: Effects of Easing Occupational Licensing for Foreign-trained Physicians''}{Newly digitized state licensure records\ds AMA physician directories, individuals linked across years\ds County-level AHA hospital and NCHS mortality data\ds Staggered DiD across state reform dates}
+\papernote{\textbf{Job Market Paper}---``Doctors With(out) Borders: Effects of Easing Occupational Licensing for Foreign-trained\newline Physicians''}{Newly digitized state licensure records\ds AMA physician directories, individuals linked across years\ds County-level AHA hospital and NCHS mortality data\ds Staggered DiD across state reform dates}
+\vspace{6pt}
 \papernote{``The Effects of Marriage Bar: Evidence from US Teachers in 1900--1940,'' with Rebecca Brough}{Hand-collected marriage bar adoption and repeal, U.S. city school boards\ds Newspapers and journals\ds 1880--1940 Census\ds Staggered DiD across city-level adoption timing}
 \papernote{``Cash for Class: The Effect of Paying Students for Full-Time Community College Enrollment,'' with Paco Martorell, Scott E. Carrell, Elizabeth Friedmann, and Alice Li}{Student-level linkage across large administrative datasets\ds Regression discontinuity at an income eligibility threshold}
-
-% ===================== POLICY REPORTS =====================
-\section{Policy Reports}
-\paper{``Effects of Financial Aid Expansion for Community College Adult Learners,'' with Oded Gurantz, Michal Kurlaender, Elizabeth Friedmann, and Paco Martorell. \textit{Revise and Resubmit.}}
+\papernote{``Effects of Financial Aid Expansion for Community College Adult Learners,'' with Oded Gurantz, Michal Kurlaender, Elizabeth Friedmann, and Paco Martorell. \textit{Revise and Resubmit.}}{Two-way fixed effects DiD between eligibility groups and recipient cohorts}
 
 % ===================== WORKS IN PROGRESS =====================
 \section{Works in Progress}
 \paper{``Competition Without Entry: Evidence from California's 1961 DO--MD Merger''}
-\paper{``Hospital Desegregation and the Black Medical Profession,'' with Mark Anderson}
 \paper{``Addressing OCR Failures in Economic History: An Agentic AI Approach,'' with Joshua Barnett}
 \paper{``Long-run Health Impact of Accessing Licensed Physicians''}
 
 % ===================== FELLOWSHIPS AND AWARDS =====================
 \section{Fellowships and Awards}
-\cvitem{Russell Sage Foundation Dissertation Fellowship}{2026}
+\cvitem{Russell Sage Foundation Dissertation Research Grant}{2026}
 \cvitem{Dean's Summer Graduate Support Award}{2026}
 \cvitem{ASHEcon Diversity Scholarship}{2026}
 \cvitem{UC President's Lindau Nobel Laureate Meeting Fellowship}{2025}
-\cvitem{Research Grant (*4), UC Davis Economics Department}{2023--2026}
+\cvitem{Research Grants (×4), UC Davis Economics Department}{2023--2026}
 
 % ===================== EXTERNAL CONFERENCE PRESENTATIONS =====================
+\needspace{5\baselineskip}
 \section{External Conference Presentations}
 \bline{\textbf{2026}: Becker Friedman Institute Health Economics Initiative Conference, ASHEcon, ASSA}
 \bline{\textbf{2025}: Economic History Association Meeting, Lindau Nobel Laureate Meeting in Economics Science}
@@ -131,23 +133,23 @@
 
 % ===================== EMPLOYMENT =====================
 \section{Employment}
-\cvitem{Research Assistant for Professors Scott Carrell and Paco Martorell, UC Davis}{2022--present}
+\cvitem{Research Assistant for Professors Scott Carrell and Paco Martorell, UC Davis}{2022--2026}
 \cvitem{Research Assistant for Professor Sharon Xuejing Zuo, Fudan University}{2021}
 \cvitem{Mergers \& Acquisitions Intern, Fosun International, Shanghai}{Dec. 2020--May 2021}
 \cvitem{Research Assistant for Professor Laura Hering, Erasmus University of Rotterdam}{2020}
 
 % ===================== SERVICE AND LEADERSHIP =====================
 \section{Service and Leadership}
-\cvitem{\textbf{Referee}: \textit{Economic Inquiry}}{2026}
-\cvitem{\textbf{Discussant} (×2): Global Migration Center Student Seminar, UC Davis}{2025}
-\cvitem{\textbf{Co-organizer}: Applied Micro Student Talk, UC Davis}{2023--2025}
-\cvitem{\textbf{Head Organizer}: Gender Economics Reading Group (15+ students), UC Davis}{2021--2022}
+\cvitem{Referee: \textit{Economic Inquiry}}{2026}
+\cvitem{Discussant (×2): Global Migration Center Student Seminar, UC Davis}{2025}
+\cvitem{Co-organizer: Applied Micro Student Talk, UC Davis}{2023--2025}
+\cvitem{Head Organizer: Gender Economics Reading Group (15+ students), UC Davis}{2021--2022}
 
 % ===================== OTHER SKILLS =====================
 \section{Other Skills}
-\bline{\textbf{Software}: Stata, R, Python, SQL, MATLAB, LaTeX}
-\bline{\textbf{Data}: Large-scale administrative data; historical data digitization (OCR / LLM-assisted extraction) of AMA physician directories and state licensure records; record linkage and fuzzy matching}
-\bline{\textbf{Language}: Chinese (Native), English (Fluent)}
+\bline{Software: Stata, R, Python, SQL, MATLAB, LaTeX}
+\bline{Data: Large-scale administrative data; historical data digitization (OCR / LLM-assisted extraction) of AMA physician directories and state licensure records; record linkage and fuzzy matching}
+\bline{Language: Chinese (Native), English (Fluent)}
 
 % ===================== REFERENCES =====================
 \section{References}
@@ -155,11 +157,5 @@
 \refentry{Santiago P\'erez}{Associate Professor of Economics\\University of California, Davis}{seperez@ucdavis.edu}{(+1) 650-739-3478}\hspace{0.02\textwidth}%
 \refentry{Marianne P. Bitler}{Professor and Chair of Economics\\University of California, Davis}{bitler@ucdavis.edu}{(+1) 415-305-5644}\hspace{0.02\textwidth}%
 \refentry{Giovanni Peri}{Professor of Economics\\University of California, Davis}{gperi@ucdavis.edu}{(+1) 510-734-3774}\par
-
-% ===================== FOOTER =====================
-\vfill
-\begin{center}
-  \textit{Last update: \today}
-\end{center}
 
 \end{document}

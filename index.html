@@ -39,7 +39,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Lato:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet" />
   <style>
     * {
       margin: 0;
@@ -75,11 +75,12 @@
 
     .page-heading {
       font-family: 'Cormorant Garamond', Georgia, serif;
-      font-size: 3.6rem;
+      font-size: 2.6rem;
       font-weight: 500;
       color: #457b9d;
       text-align: center;
-      margin-bottom: 48px;
+      line-height: 1.1;
+      margin-bottom: 18px;
     }
 
     nav {
@@ -110,33 +111,139 @@
     /* Profile section */
     main {
       max-width: 1100px;
-      margin: 70px auto;
+      margin: 16px auto 70px;
       padding: 0 40px;
     }
 
     .profile {
       display: flex;
       align-items: center;
-      gap: 80px;
+      gap: 56px;
     }
 
-    .profile-photo {
+    .profile-left {
       flex-shrink: 0;
-      width: 360px;
+      width: 320px;
       max-width: 100%;
-      overflow: hidden;
     }
 
     .profile-photo img {
-      width: 200%;
-      height: auto;
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      object-position: 50% 85%;
       display: block;
-      margin-left: -50%;
+    }
+
+    .profile-contact {
+      font-family: 'Lato', Arial, sans-serif;
+      font-size: 1rem;
+      color: #333;
+      margin-top: 10px;
     }
 
     .profile-info {
       flex: 1;
       min-width: 0;
+    }
+
+    .profile-info p,
+    .jmp p {
+      font-family: 'Lato', Arial, sans-serif;
+      font-size: 1rem;
+      line-height: 1.75;
+      color: #333;
+      text-align: justify;
+      text-wrap: pretty;
+    }
+
+    .profile-info p + p,
+    .jmp p + p {
+      margin-top: 18px;
+    }
+
+    .profile-info p.job-market {
+      font-weight: 700;
+      color: #457b9d;
+    }
+
+    .cv-button {
+      display: inline-block;
+      margin-left: 12px;
+      padding: 0 12px;
+      border: 1.5px solid #457b9d;
+      border-radius: 4px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      line-height: 1.7;
+      color: #457b9d;
+      text-decoration: none;
+      vertical-align: 1px;
+      transition: background 0.2s, color 0.2s;
+    }
+
+    .nowrap {
+      white-space: nowrap;
+    }
+
+    .cv-button:hover {
+      background: #457b9d;
+      color: #fff;
+    }
+
+    .jmp {
+      margin-top: 32px;
+    }
+
+    .jmp p.jmp-title {
+      text-align: left;
+    }
+
+    .jmp a.paper-button {
+      display: inline-block;
+      margin-left: 12px;
+      padding: 0 12px;
+      border: 1.5px solid #457b9d;
+      border-radius: 4px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      line-height: 1.7;
+      color: #457b9d;
+      text-decoration: none;
+      white-space: nowrap;
+      vertical-align: 1px;
+      transition: background 0.2s, color 0.2s;
+    }
+
+    .jmp a.paper-button:hover {
+      background: #457b9d;
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .jmp-label {
+      font-weight: 700;
+      color: #222;
+    }
+
+    .profile-contact a {
+      color: #222;
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+
+    .profile-contact a:hover {
+      color: #457b9d;
+    }
+
+    .jmp a {
+      color: #0070f3;
+      text-decoration: none;
+    }
+
+    .jmp a:hover {
+      text-decoration: underline;
     }
 
     /* Tablet */
@@ -156,13 +263,21 @@
         gap: 32px;
       }
 
-      .profile-photo {
+      .profile-left {
         width: 440px;
       }
 
-      .profile-info {
-        padding-top: 0;
+      .profile-contact {
         text-align: center;
+      }
+
+      .profile-info p,
+      .jmp p {
+        text-align: left;
+      }
+
+      .jmp {
+        margin-top: 48px;
       }
     }
 
@@ -181,47 +296,9 @@
         font-size: 0.85rem;
       }
 
-      .profile-photo {
+      .profile-left {
         width: 500px;
       }
-
-      .profile-info {
-        text-align: left;
-      }
-    }
-
-    .profile-info h1 {
-      font-size: 1.1rem;
-      font-weight: 400;
-      line-height: 1.85;
-      color: #444;
-      margin-bottom: 20px;
-    }
-
-    .profile-info p {
-      font-size: 1.1rem;
-      line-height: 1.85;
-      color: #444;
-      margin-bottom: 20px;
-    }
-
-    .profile-info p:last-child {
-      margin-bottom: 0;
-    }
-
-    .profile-info p.job-market {
-      font-weight: 700;
-      color: #457b9d;
-    }
-
-
-    .profile-info p a {
-      color: #0070f3;
-      text-decoration: none;
-    }
-
-    .profile-info p a:hover {
-      text-decoration: underline;
     }
   </style>
 </head>
@@ -241,20 +318,29 @@
     <h1 class="page-heading">Wenni Yang</h1>
     <div class="profile">
 
-      <!-- LEFT: Photo -->
-      <div class="profile-photo">
-        <img src="profilephoto.jpg" alt="Wenni Yang" />
+      <!-- LEFT: Photo and email -->
+      <div class="profile-left">
+        <div class="profile-photo">
+          <img src="profilephoto.jpg" alt="Wenni Yang" />
+        </div>
+        <p class="profile-contact">Email: <a href="mailto:wniyang@ucdavis.edu">wniyang@ucdavis.edu</a></p>
       </div>
 
-      <!-- RIGHT: Bio and email -->
+      <!-- RIGHT: Bio -->
       <div class="profile-info">
-        <h1>I am a 6th year PhD student in Economics at University of California, Davis. My research interests are labor economics, health economics, and economic history. </h1>
-        <p class="job-market">I am on the 2026&ndash;2027 economics job market.</p>
-        <p>My dissertation research is generously supported by a Russell Sage Foundation dissertation fellowship for the 2026&ndash;2027 academic year.</p>
-        <p>You can reach me at <a href="mailto:wniyang@ucdavis.edu">wniyang@ucdavis.edu</a>.</p>
+        <p>I am a PhD candidate in Economics at the University of California, Davis.</p>
+        <p>I am a labor and health economist studying how barriers to entering a profession shape the allocation of workers and the provision of health care.</p>
+        <p>I am a 2026 recipient of the Russell Sage Foundation Dissertation Research Grant.</p>
+        <p class="job-market">I am on the 2026&ndash;2027 economics job <span class="nowrap">market.<a class="cv-button" href="CV_Wenni_Yang.pdf" target="_blank" rel="noopener">CV</a></span></p>
       </div>
 
     </div>
+
+    <!-- Job market paper -->
+    <section class="jmp">
+      <p class="jmp-title"><span class="jmp-label">Job Market Paper:</span> &ldquo;Doctors With(out) Borders: Effects of Easing Occupational Licensing for Foreign-trained <span class="nowrap">Physicians&rdquo;<a class="paper-button" href="Yang_JMP.pdf" target="_blank" rel="noopener">Latest Draft</a></span></p>
+      <p>This paper studies how easing licensing requirements for non-U.S.-citizen physicians affects the supply and composition of the physician workforce and hospitals&rsquo; investment in other inputs. From 1960 through the 1970s, more than thirty states removed citizenship requirements for medical licensure. I use foreign medical graduates (FMGs) as a proxy for non-citizen physicians. Using newly assembled licensure and physician data, I show that easing a licensing requirement changes physician supply through expanding entry, with a suggestive decline among established foreign incumbents, no detectable crowd-out of U.S.-trained physicians, and no short-run deterioration in the average quality of the licensed FMG stock. Hospitals respond by expanding staffed beds by about 4 percent. Effects are concentrated among counties with above-median Medicaid exposure, suggesting physician supply is a binding constraint on hospital input adjustment in anticipation of a growth in demand for health care. Estimated effects on population mortality are imprecise. These effects emerge primarily after the federal government relaxed J-1 visa return requirements in 1970, indicating complementary constraints between state and federal regulation.</p>
+    </section>
   </main>
 
 </body>
